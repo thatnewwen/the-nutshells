@@ -14,7 +14,6 @@
 
 get_header(); ?>
 
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -43,8 +42,8 @@ get_header(); ?>
 			?>
 
 			<div class="posts-nav">
-			  <?php echo get_previous_posts_link( '<span class="nav-text-arrow">PREVIOUS<i class=" arrow fa fa-chevron-up"></i></span>' );
-			  echo get_next_posts_link( '<span class="nav-text-arrow"><i class="arrow fa fa-chevron-down"></i>NEXT</span></div>' ); ?>
+			  <?php echo get_previous_posts_link( '<span class="nav-text-arrow"><i class=" arrow fa fa-chevron-up"></i></span>' );
+			  echo get_next_posts_link( '<span class="nav-text-arrow"><i class="arrow fa fa-chevron-down"></i></span></div>' ); ?>
 		  </div>
 
 		<?php

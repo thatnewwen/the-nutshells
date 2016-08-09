@@ -15,6 +15,7 @@
 
   <div class="post-content">
     <div class="image-header">
+      <div class="image-header-dark"></div>
         <?php $post = get_the_ID();
 				?><div class="category-div"><?php the_category(', ',''); ?></div><?php
     		$picture = get_post_meta($post, '-picture', true);
@@ -120,6 +121,7 @@
 				    echo "<div class='score'>" . $score . "</div>";
 					  } ?>
 				</div>
+				<div class="rating-bar"></div>
 			</div>
 			<?php } ?>
 			</article><!-- #post-## -->
