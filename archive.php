@@ -8,12 +8,7 @@
  */
 
 get_header(); ?>
-<aside class="sidebar">
-<nav id="site-navigation" class="main-navigation" role="navigation">
-	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'artisticritique' ); ?></button>
-	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-</nav><!-- #site-navigation -->
-</aside>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
