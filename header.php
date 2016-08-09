@@ -21,6 +21,12 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/withinviewport.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.withinviewport.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/progressbar.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/review-rating.js"></script>
+
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -51,6 +57,5 @@
 			endif; ?>
 		
 		</div><!-- .site-branding -->
-
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">

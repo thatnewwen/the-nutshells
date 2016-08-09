@@ -507,11 +507,9 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
 }
 
 a:visited {
-	color: purple;
 }
 
 a:hover,
@@ -1006,9 +1004,10 @@ article > img {
 }
 
 #primary-menu li a{
-	color: white;
-	font-family: 'Vollkorn', serif;
-  font-size: 25px;
+	color: whitesmoke;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
 }
 
 .site-footer {
@@ -1153,17 +1152,9 @@ article > img {
   color: rgba(255, 255, 255, 0.8);
 }
 
-#site-navigation{
-	width: 100%;
-	padding-top: 3em;
-	margin: 0px;
-}
-
 .menu-item{
-	clear: both;
-	width: 100%;
-	text-align: center;
-	margin-left: 0px;
+  text-align: center;
+  margin: 5px 10px;
 }
 
 .image-header{
@@ -1214,7 +1205,7 @@ letter-spacing: 1px;}
 	width: 150px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   #masthead{
   	background: #2b2b2b;
   	position: relative;
@@ -1241,17 +1232,25 @@ letter-spacing: 1px;}
   article > img{
   	height: 100px;
   }
+
+  .footer-span{
+  	display: none;
+  }
+
+  #site-navigation{
+  	display: none;
+  }
 }
 
 .nav-text-arrow{
 	font-family: 'Vollkorn', serif;
-	color: #b5b6b4;
+	color: gray;
 	text-decoration: none;
 	font-size: 25px;
 }
 
 .nav-text-arrow:hover,.nav-text-arrow:hover .arrow{
-	color: white;
+	color: black;
 
 }
 
@@ -1263,9 +1262,74 @@ letter-spacing: 1px;}
 
 .posts-nav{
 	text-align: center;
-	background-color: #353535;
-}
+    background-color: snow;
+  }
 
 .posts-nav a{
+	text-decoration: none;
+}
+
+.image-header-dark{
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	bottom: 0;
+	background: rgba(245, 245, 245, 0.5);
+}
+
+svg {
+	width: 100%;
+	height: 8px;
+}
+
+footer{
+  height: 250px;
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-span{
+	font-family: 'Questrial';
+	    font-size: 2em;
+	    text-transform: lowercase;
+	    margin-bottom: -20px;
+}
+
+.whitesmoke{
+	color:whitesmoke;
+	text-decoration: none;
+}
+
+.darkgray{
+	color: darkgray;
+}
+
+.mini-name-box{
+  padding: 10px;
+  border: 2px solid darkgray;
+
+}
+
+.mini-name-box:hover{
+	border: 2px solid whitesmoke;
+}
+
+.footer-title{
+    font-size: 1em;
+    font-family: "Lato";
+    color: darkgray;
+    font-weight: bold;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+}
+
+footer a{
 	text-decoration: none;
 }
