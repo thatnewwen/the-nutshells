@@ -13,12 +13,7 @@
  */
 
 get_header(); ?>
-<aside class="sidebar">
-<nav id="site-navigation" class="main-navigation" role="navigation">
-	<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'artisticritique' ); ?></button>
-	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-</nav><!-- #site-navigation -->
-</aside>
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -45,7 +40,14 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			?>
+
+			<div class="posts-nav">
+			  <?php echo get_previous_posts_link( '<span class="nav-text-arrow">PREVIOUS<i class=" arrow fa fa-chevron-up"></i></span>' );
+			  echo get_next_posts_link( '<span class="nav-text-arrow"><i class="arrow fa fa-chevron-down"></i>NEXT</span></div>' ); ?>
+		  </div>
+
+		<?php
 
 		else :
 

@@ -12,24 +12,50 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <?php the_post_thumbnail('full'); ?>
-	<div class="overlay">
-  </div>
+
   <div class="post-content">
+    <div class="image-header">
+        <?php $post = get_the_ID();
+				?><div class="category-div"><?php the_category(', ',''); ?></div><?php
+    		$picture = get_post_meta($post, '-picture', true);
+    		$poster = get_post_meta($post, '-poster', true);
+    		$score = get_post_meta($post, '-score', true);
+    		$title = get_post_meta($post, '-title', true);
+    		
+
+    		if ($poster != '') {
+    		  echo "<div class='image-container'><img class='poster' src='" . $poster . "'></div>";
+    		} 		
+    		if ($picture != '') {
+    		  echo "<div class='image-container'><img class='picture' src='" . $picture . "'></div>";
+    		} 		?>
+
+    		<div class='title-div'><span> <?php the_date() 
+    		?> </span></div>
+
+
+    </div>
+
 	<header class="entry-header">
 		<?php
+
 			if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
-
+				
+				if ($title != '') {
+					echo "<div class='title'>" . $title . "</div>";
+				}
 
 			} else {
 				the_title( '<h2 class="entry-title">','</h2>' );
+
+				if ($title != '') {
+					echo "<div class='title'>" . $title . "</div>";
+				}
 			}
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<h2 class="category-title"><?php the_category(', ',''); ?></h2>
 
-		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
@@ -84,16 +110,16 @@
 			  ?>
 			</div>
 		<?php } else { ?>
-			<div class="index-content">
-				<?php the_content(); 
-							    $post = get_the_ID();
+				<div class="index-content">
+					<?php the_content(); 
+								    $post = get_the_ID();
 
-				  $score = get_post_meta($post, '-score', true);
-				  
-				  if ($score != '') {
-			    echo "<div class='score'>" . $score . "</div>";
-				  } ?>
-			</div>
+					  $score = get_post_meta($post, '-score', true);
+					  
+					  if ($score != '') {
+				    echo "<div class='score'>" . $score . "</div>";
+					  } ?>
+				</div>
 			</div>
 			<?php } ?>
 			</article><!-- #post-## -->
