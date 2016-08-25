@@ -38,12 +38,10 @@ if ( post_password_required() ) {
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'artisticritique' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'artisticritique' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'artisticritique' ) ); ?></div>
-
-			</div><!-- .nav-links -->
+			<div class="posts-nav">
+			  <?php echo get_previous_posts_link( '<span class="nav-text-arrow"><i class=" arrow fa fa-chevron-up"></i></span>' );
+			  echo get_next_posts_link( '<span class="nav-text-arrow"><i class="arrow fa fa-chevron-down"></i></span></div>' ); ?>
+		  </div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 
@@ -59,12 +57,10 @@ if ( post_password_required() ) {
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'artisticritique' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'artisticritique' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'artisticritique' ) ); ?></div>
-
-			</div><!-- .nav-links -->
+			<div class="posts-nav">
+			  <?php echo get_previous_posts_link( '<span class="nav-text-arrow"><i class=" arrow fa fa-chevron-up"></i></span>' );
+			  echo get_next_posts_link( '<span class="nav-text-arrow"><i class="arrow fa fa-chevron-down"></i></span></div>' ); ?>
+		  </div>
 		</nav><!-- #comment-nav-below -->
 		<?php
 		endif; // Check for comment navigation.

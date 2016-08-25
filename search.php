@@ -32,7 +32,10 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+					?><div class="posts-nav">
+			  <?php echo get_previous_posts_link( '<span class="nav-text-arrow"><i class=" arrow fa fa-chevron-up"></i></span>' );
+			  echo get_next_posts_link( '<span class="nav-text-arrow"><i class="arrow fa fa-chevron-down"></i></span></div>' ); ?>
+		  </div><?php
 
 		else :
 
