@@ -21,21 +21,27 @@ get_header(); ?>
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+			<div class="archive-div">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
+				$post = get_the_ID();
+				$picture = get_post_meta($post, '-picture', true);
+				$poster = get_post_meta($post, '-poster', true);
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				if ($poster != '') {
+				    		  echo '<div class="archive-image-container"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><img class="archive-poster" src="' . $poster . '"></a></div>';
+				    		} 		
+				    		if ($picture != '') {
+				    		  echo '<div class="archive-image-container"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><img class="archive-picture" src="' . $picture . '"></a></div>';
+				    		}
 
 			endwhile;
 
-			the_posts_navigation();
+						?></div><div class="posts-nav">
+				  <?php echo get_previous_posts_link( '<span class="nav-text-arrow"><i class=" arrow fa fa-chevron-up"></i></span>' );
+				  echo get_next_posts_link( '<span class="nav-text-arrow"><i class="arrow fa fa-chevron-down"></i></span></div>' ); ?>
+			  </div><?php
 
 		else :
 

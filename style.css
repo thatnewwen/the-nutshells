@@ -917,18 +917,17 @@ article > img {
 	position: absolute;
 	top: 0;
 	height: 50%;
-
+  width: 100%;
 }
 
 .entry-header a,.entry-header a:visited {
-	color: black;
+	color: #f31909;
 	text-decoration: none;
-	opacity: 0.7;
-	transition: opacity 0.8s ease;
+	transition: color 0.8s ease;
 }
 
 .entry-header a:hover {
-	opacity: 1.0;
+	color: #ff4d40;
 }
 
 .entry-meta {
@@ -1094,7 +1093,8 @@ article > img {
 	padding: 2em;
 	text-align: center;
 	color: white;
-	font-family: 'Vollkorn', serif;
+	font-family: 'Montserrat', serif;
+	text-transform: uppercase;
 }
 
 .sidebar{
@@ -1182,7 +1182,7 @@ letter-spacing: 1px;}
   right: 5px;	
   text-transform: uppercase;
   text-decoration: none;
-  color: orangered;
+  color: #f31909;
 }
 
 .title-div{
@@ -1196,7 +1196,7 @@ letter-spacing: 1px;}
 	left: 5px;	
 	text-transform: uppercase;
 	text-decoration: none;
-	color: orangered;
+	color: #f31909;
 }
 
 .picture{
@@ -1262,7 +1262,7 @@ letter-spacing: 1px;}
 
 .posts-nav{
 	text-align: center;
-    background-color: snow;
+  background-color: #e2e2e2;
   }
 
 .posts-nav a{
@@ -1332,4 +1332,18 @@ footer{
 
 footer a{
 	text-decoration: none;
+}
+
+.archive-div{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.archive-image-container{
+	width: 15%;
+	margin: 2.5%;
+}
+
+.archive-image-container:hover{
+	opacity: 0.7;
 }
