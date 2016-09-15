@@ -17,12 +17,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<footer>
-  <span class="footer-span"><span class="darkgray">artisticritique</span><span class="whitesmoke">thenutshells</span></span>
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'artisticritique' ); ?></button>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-	</nav><!-- #site-navigation -->
+<footer>	
 	<a href="http://alexwen.xyz"><div class="mini-name-box">
 	  <span class="footer-title">ALEX</span>
 	  <span class="footer-title">WEN</span>
