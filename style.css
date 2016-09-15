@@ -352,7 +352,7 @@ html {
 }
 
 body {
-	background: snow; /* Fallback for when there is no custom background color defined. */
+	background: white; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -532,7 +532,8 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	display: block;
-	float: left;
+  text-align: center;
+  width: 100%;
 }
 
 .main-navigation ul {
@@ -901,27 +902,28 @@ object {
 	left: 5%;
 	right: 5%;
 	height: 20%;
-	background: whitesmoke;
-	padding-top: 100px;
-	padding-bottom: 50px;
 }
 
 .post {
 	position: relative;
 	margin-bottom: 0;
-	padding-top: 100px;
+}
+
+.white-bar{
+	border-top: 8px solid white;
 }
 
 article > img {
 	object-fit: cover;
-	position: absolute;
+	margin-bottom: -7px;
+
 	top: 0;
 	height: 50%;
   width: 100%;
 }
 
 .entry-header a,.entry-header a:visited {
-	color: #f31909;
+	color: whitesmoke;
 	text-decoration: none;
 	transition: color 0.8s ease;
 }
@@ -937,12 +939,21 @@ article > img {
 
 .entry-title {
 	font-size: 2em;
-	margin-bottom: 0;
 	opacity: 1.0;
 	color: #f31909;
 	text-transform: uppercase;
-	font-family: 'Montserrat';
+	font-family: 'Oswald';
 	font-weight: normal;
+	margin-bottom: 0px;
+}
+
+.entry-title:hover{
+	
+}
+
+.entry-title a{
+	color: orangered;
+	text-decoration: none;
 }
 
 .overlay {
@@ -973,28 +984,25 @@ article > img {
 }
 
 #masthead {
-  position: absolute;
   width: 100%;
 	z-index: 500;
+	text-align: center;
+	margin: 50px 0px;
 }
 
 .site-title {
-  float: left;
-  margin-left: 1em;
 }
 
 .site-title a {
 	text-decoration: none;
-  color: white;
-	font-family: 'Questrial', sans-serif;
-  font-size: 25px;
-  opacity: 0.8;
+  color: #525252;
+	font-family: 'Knewave', sans-serif;
+  font-size: 50px;
   transition: opacity 0.8s ease;
-
+  display: block;
 }
 
 .site-title a:hover {
-  opacity: 1.0;
 }
 
 .main-navigation{
@@ -1003,8 +1011,8 @@ article > img {
 }
 
 #primary-menu li a{
-	color: whitesmoke;
-	font-family: 'Montserrat', sans-serif;
+	color: #525252;
+	font-family: 'Oswald', sans-serif;
 	font-size: 18px;
 	text-transform: uppercase;
 }
@@ -1049,7 +1057,7 @@ article > img {
 .poster {
 	width: 150px;
 	position: relative;
-	top: 25px;}
+}
 
 @keyframes slide {
 	from {margin-left: -50%;}
@@ -1060,15 +1068,27 @@ article > img {
 	max-width: 100%
 }
 
+.meta-info {
+	padding: 15%;
+}
+
 .key{
-	font-size: 18px;
-  color: gray;
+  font-size: 12px;
+  color: #ababab;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.tag-name{
+	font-size: 12px;
+	color: #FF9800;
+	margin-top: 3px;
 }
 
 .tag-name a{
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: none;
-  color: black;
+  color: #e2e2e2;
 }
 
 .tag-name a:hover{
@@ -1093,7 +1113,7 @@ article > img {
 	padding: 2em;
 	text-align: center;
 	color: white;
-	font-family: 'Montserrat', serif;
+  font-family: 'Oswald', serif;
 	text-transform: uppercase;
 }
 
@@ -1114,43 +1134,45 @@ article > img {
 }
 
 .index-content{
-    color: black;
-    padding-top: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-bottom: 3em;
-    height: 70%;
-    font-family: 'Vollkorn', serif;
-    text-align: justify;
-    background: whitesmoke;
+	color: #525252;    padding-top: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
+  width: 80%;
+  font-family: 'Vollkorn', serif;
+  text-align: justify;
+  background: whitesmoke;
 }
 
 .post-content {
-	width: 65%;
 	position: relative;
 	margin: auto;
 	display: flex;
-	flex-direction: column;
 }
 
 .score{
-	text-align: center;
-	font-size: 1.5em;
-	font-family: 'Montserrat';
-		color: orangered;
+	text-align: left;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  color: #dedede;
+  margin-top: 5px;
 
+}
+
+.site-title{
+  margin-bottom: 0em;
 }
 
 .site-title .artisticritique {
-	color: rgba(255, 255, 255, 0.32);
-	font-family: 'Questrial', sans-serif;
-	font-size: 25px;
-	transition: color 0.8s ease;
+  color: #525252;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  transition: color 0.5s ease;
+  margin-bottom: -12px;
+  padding-right: 200px;
+  text-transform: uppercase;
 }
 
-.site-title .artisticritique:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
 
 .menu-item{
   text-align: center;
@@ -1159,20 +1181,18 @@ article > img {
 
 .image-header{
 	position: relative;
-	height: 150px;
 	display: flex;
 	justify-content: center;
 	font-family: 'Montserrat';
-	font-size: 15px;	background: rgba(255, 255, 255, 0.4);
+	font-size: 15px;	
 letter-spacing: 1px;}
 
 .image-container{
-	width: 20%;
+	padding-top: 30px;
 	text-align: center;
 }
 
 .category-div{
-	width: 40%;
 	position: relative;
 }
 
@@ -1186,17 +1206,16 @@ letter-spacing: 1px;}
 }
 
 .title-div{
-	width: 40%;
 	position: relative;
+	text-transform: uppercase;
+	font-size: 14px;
 }
 
-.title-div span{
-	position: absolute;
-	bottom: 5px;
-	left: 5px;	
-	text-transform: uppercase;
+.title-div span, .title-div a{
+	
 	text-decoration: none;
-	color: #f31909;
+	    color: #525252;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .picture{
@@ -1205,10 +1224,32 @@ letter-spacing: 1px;}
 	width: 150px;
 }
 
+.left-content{
+	background-color: #525252;
+	width: 20%;
+	border-right: 15px solid #dedede;
+	transition: border-right 0.5s ease;
+}
+
+.post-content:hover .left-content{
+	border-right: 15px solid orangered;	
+}
+
+
 @media only screen and (max-width: 700px) {
   #masthead{
-  	background: #2b2b2b;
+    background: white;
   	position: relative;
+  	padding-left: 0.4em;
+  }
+
+  .white-bar{
+  	border-top: none;
+  }
+
+  .left-content{
+  	width: 100%;
+  	border-right: 15px solid orangered;
   }
 
   .image-header{
@@ -1217,6 +1258,7 @@ letter-spacing: 1px;}
 
   .post-content{
   	width: 100%;
+  	flex-direction: column-reverse;
   }
 
   .entry-header{
@@ -1239,6 +1281,11 @@ letter-spacing: 1px;}
 
   #site-navigation{
   	display: none;
+  }
+
+  .index-content{
+  	width: 100%;
+  	padding: 40px;
   }
 }
 
@@ -1337,18 +1384,31 @@ footer a{
 .archive-div{
 	display: flex;
 	flex-wrap: wrap;
-	margin: 20px;
+  margin: 50px 100px;
 }
 
 .archive-image-container{
-	width: 15%;
-	margin: 2.5%;
-	display: flex;
- align-items: center;
- background: #f3f3f3;
- padding: 10px;
+	width: 17%;
+  margin: 1.5%;
+  display: flex;
+  align-items: center;
 }
 
 .archive-image-container:hover{
 	opacity: 0.7;
+}
+
+
+.menu-menu-1-container{
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+
+.parallax{
+	height: 500px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
