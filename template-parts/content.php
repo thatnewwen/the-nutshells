@@ -63,7 +63,10 @@ if ( is_single() ) { ?>
     		          echo "<div class='tag-name'> /  <a href='" . $tagUrl . "'>" . $tag . "</a></div>";
     		        }
     		      }
-    		    } ?>
+    		    } 
+    		    echo "<div class='score'>$score</div>"
+    		    ?>
+
     		    </div>
 
 		<header class="entry-header">
