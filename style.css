@@ -910,7 +910,7 @@ object {
 }
 
 .white-bar{
-	border-top: 8px solid white;
+	border-top: 12px solid white;
 }
 
 article > img {
@@ -1015,6 +1015,10 @@ article > img {
 	font-family: 'Oswald', sans-serif;
 	font-size: 18px;
 	text-transform: uppercase;
+}
+
+#primary-menu li a:hover{
+	color: orangered;
 }
 
 .site-footer {
@@ -1138,7 +1142,7 @@ article > img {
   padding-left: 5em;
   padding-right: 5em;
   padding-bottom: 3em;
-  width: 80%;
+  width: 82%;
   font-family: 'Vollkorn', serif;
   text-align: justify;
   background: whitesmoke;
@@ -1225,7 +1229,7 @@ letter-spacing: 1px;}
 
 .left-content{
 	background-color: #525252;
-	width: 20%;
+	width: 250px;
 	border-right: 15px solid #dedede;
 	transition: border-right 0.5s ease;
 }
@@ -1329,7 +1333,7 @@ svg {
 }
 
 footer{
-  height: 250px;
+  height: 150px;
   background: grey;
   display: flex;
   justify-content: center;
@@ -1410,4 +1414,69 @@ footer a{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.side-content{
+	-webkit-transform: rotate(-90deg) translateX(-100%);
+  -webkit-transform-origin: 0% 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  text-align: right;
+  padding-bottom: 7px;
+  width: 50%;
+}
+
+.top-content{
+	font-family: 'Montserrat';
+	text-transform: uppercase;
+	text-align: right;
+  margin-right: 10px;
+  margin-top: -34px;
+  margin-bottom: 7px;
+}
+
+.nutshell-tab{
+	padding: 10px 15px;
+	background: #525252;
+	color: white;
+}
+
+.single-nutshell-tab{
+	padding: 10px 15px;
+	background: whitesmoke;
+	color: orangered;
+}
+
+.single-review-tab{
+	text-decoration: none;
+	color: orangered;
+	padding: 10px 15px;
+	background-color: rgba(245, 245, 245, 0.83);
+	transition: background-color 0.3s ease;
+	margin-left: 5px;
+}
+
+.single-review-tab:hover{
+	color: orangered;
+	background-color: whitesmoke;
+}
+
+.review-tab{
+	text-decoration: none;
+	color: white;
+	padding: 10px 15px;
+	background-color: rgb(136, 136, 136);
+	transition: background-color 0.3s ease;
+	margin-left: 5px;
+}
+
+.review-tab:hover {
+	color: white;
+	background-color: #525252;
+}
+@media (min-width: 1000px) {
+	article {
+		margin-left: 200px;
+	}
 }
